@@ -27,26 +27,38 @@ function setup() {
 
     var block1_options={
 		isIstatic:true
-	    fill();
-		ellipseMode();
+	    
 
 	} 
     bloco1 =Bodies.rectangle(250,200,150,20,block1_options);
-    World.add(world,bloco1)
+    World.add(world,bloco1);
 
 
 
-	Engine.run(engine);
-  
+	Engine.run(Engine);
+
+
+    var block2_options={
+		isIstatic:true
+	    
+
+	} 
+	bloco2 =Bodies.rectangle(250,200,150,20,block2_options);
+    World.add(world,bloco2);
+
+
+
+	Engine.run(Engine);
 }
 
 
 function draw() {
+  background(200);
   rectMode(CENTER);
-  background(0);
-  
+ Engine.update(Engine);
+  fill();
+  ellipseMode();
   drawSprites();
- 
 }
 
 
